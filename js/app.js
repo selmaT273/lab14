@@ -1,5 +1,7 @@
 'use strict';
 
+var totalQuantity = 0;
+
 // Cart constructor.
 var Cart = function(items) {
   // this.items is an array of CartItem instances.
@@ -22,6 +24,7 @@ Cart.prototype.addItem = function(product, quantity) {
     var newItem = new CartItem(product, quantity);
     this.items.push(newItem);
   }
+  totalQuantity += quantity;
   console.log(this.items);
 };
 
@@ -33,7 +36,8 @@ Cart.prototype.saveToLocalStorage = function() {
 Cart.prototype.removeItem = function(item) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
-  var removedQuantity = this.items.splice(item, 1).quantity;
+  var removedQuantity = this.items.splice(item, 1)[0].quantity;
+  console.log(this.items);
   totalQuantity -= removedQuantity;
 };
 

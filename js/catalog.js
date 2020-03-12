@@ -46,7 +46,6 @@ var itemQuantity = document.getElementById('quantity');
 var quantity = parseInt(itemQuantity.value);
   // TODO: using those, add one item to the Cart
 cart.addItem(product, quantity);
-totalQuantity += quantity;
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
