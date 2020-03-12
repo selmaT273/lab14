@@ -20,6 +20,13 @@ function renderCart() {
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {}
+var tableRows = document.querySelectorAll('#cart tbody tr');
+
+for(var i = 0; i < tableRows.length; i++){
+    if(tableRows[i]){
+        tableRows[i].remove(); 
+    }
+}
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
