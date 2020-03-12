@@ -8,8 +8,20 @@ var Cart = function(items) {
 
 Cart.prototype.addItem = function(product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
-  var newItem = new CartItem(product, quantity);
-  this.items.push(newItem);
+  var productDoesExist = false; 
+  var productIndex;
+  for(var i = 0; i < this.items.length; i++){
+    if(this.items[i].product === product) {
+        productDoesExist = true;
+        productIndex = i; 
+    }
+  }
+  if(productDoesExist){
+    this.items[productIndex].quantity += quantity;
+  } else {
+    var newItem = new CartItem(product, quantity);
+    this.items.push(newItem);
+  }
   console.log(this.items);
 };
 
