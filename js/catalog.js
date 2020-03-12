@@ -2,6 +2,8 @@
 
 'use strict';
 
+var totalQuantity = 0;
+
 // Set up an empty cart for use on this page.
 var cart = new Cart([]);
 
@@ -24,26 +26,35 @@ function populateForm() {
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 function handleSubmit(event) {
-
   // TODO: Prevent the page from reloading
-
+  event.preventDefault();
   // Do all the things ...
   addSelectedItemToCart();
   cart.saveToLocalStorage();
   updateCounter();
   updateCartPreview();
-
 }
 
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
-  // TODO: suss out the item picked from the select list
+//   // TODO: suss out the item picked from the select list
+var selectedItem = document.getElementById('items');
+var product = selectedItem.value;
+
   // TODO: get the quantity
+var itemQuantity = document.getElementById('quantity');
+var quantity = parseInt(itemQuantity.value);
   // TODO: using those, add one item to the Cart
+cart.addItem(product, quantity);
+totalQuantity += quantity;
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+function updateCounter() {
+    var navCounter = document.getElementById('itemCount');
+    navCounter.textContent = totalQuantity;
+    
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
