@@ -109,7 +109,7 @@ td {
   padding: 2% 4%;
   font-family: monospace;
   font-size: 1.25rem;
-  border-bottom: solid 1px white;
+  border-top: solid 1px white;
 }
 
 td:hover {
