@@ -82,10 +82,12 @@ input[type=submit] {
 #cartContents.card {
   position: absolute;
   right: 0;
-  top: 30%;
+  top: 60%;
   background-color: rgba(7, 7, 73, 0.753);
   border-radius: 50px;
-  width:50%;
+  width:45%;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 #cart {
