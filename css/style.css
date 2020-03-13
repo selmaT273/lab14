@@ -1,1 +1,121 @@
-/* TODO: Make it awesome */
+* {
+  box-sizing: border-box;
+}
+
+html{
+  background: linear-gradient(to bottom right, rgb(66, 64, 64), rgba(53, 107, 143, 0.781), rgba(97, 194, 233, 0.842), rgb(66, 64, 64));
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+body > header, main, footer {
+  margin: 30px auto;
+  width: 1400px;
+  clear: both;
+}
+
+h1 {
+font-size: 8rem;
+}
+
+nav ul li{
+display: inline-block;
+font-size: 2rem;
+padding: 20px;
+color: white;
+background-color: rgba(7, 7, 73, 0.753);
+border:  double 4px white;
+border-radius: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.col-1 {
+  width: 100%;
+}
+
+.col-2 {
+  margin-top: 60px;
+  width: 49%;
+  display: block;
+}
+
+.col-1 h1 {
+font-size: 4rem;
+margin: 30px;
+}
+
+.col-1 ol {
+text-align: left;
+font-size: 1.25rem;
+line-height:1.5rem;
+list-style-type: upper-alpha;
+}
+
+legend {
+  font-size: 2rem;
+  margin: 15px;
+}
+#items, #quantity {
+  display: block;
+  font-size: 1.5rem;
+  margin: 7px auto 30px;
+}
+
+label span {
+  font-size: 1.25rem;
+}
+
+input[type=number] {
+  width: 80px;
+}
+
+input[type=submit] {
+  margin: 15px;
+  font-size: 1.25rem;
+}
+
+#cartContents.card {
+  position: absolute;
+  right: 0;
+  width:49%;
+}
+
+#cart {
+  position: absolute;
+  right: 0;
+  background-color: rgba(7, 7, 73, 0.753);
+  border-radius: 50px;
+  width: 50%; 
+}
+
+footer {
+  margin-top: 600px;
+}
+
+th {
+  padding: 1% 4%;
+  font-size: 1.5rem;
+}
+
+td {
+  padding: 2% 4%;
+  font-family: monospace;
+  font-size: 1.25rem;
+  border-bottom: solid 1px white;
+}
+
+td:hover {
+  opacity: 0.5;
+}
+
+#catalog {
+  background-color: rgba(7, 7, 73, 0.753);
+  border: double 4px white;
+  border-radius: 50px;
+  padding: 15px;
+}
